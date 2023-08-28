@@ -102,9 +102,9 @@ const mailCheckBtn = document.getElementById("mailCheck");
 // aggiungo un listener al click del bottone
 mailCheckBtn.addEventListener("click", function() 
 {
+
     //do a userMail il valore del campo input "email"
     userMail = document.getElementById("userMail").value;
-    console.log(userMail);
 
     if (mailList.includes(`${userMail}`))
 {
@@ -112,7 +112,6 @@ mailCheckBtn.addEventListener("click", function()
     // //se la mail inserita è in lista viene mostrato un messaggio di esito positivo
     mailCheckText.classList.add("text-success");
     mailCheckText.innerHTML = `The adress "${userMail}" in on the list.`;
-    
 
 } 
 
@@ -123,6 +122,7 @@ else {
     mailCheckText.innerHTML = `WARNING: "${userMail}" in not a valid e-mail adress.`;
 
 }
+
 })
 
 
