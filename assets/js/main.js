@@ -53,6 +53,24 @@ Usiamo un input e un bottone per inserire la mail e poi mostriamo i risultati in
 
 const mailList = ["mail00@mail.com", "mail01@mail.com", "mail02@mail.com", "mail03@mail.com", "mail04@mail.com"]
 
+const promptMail = prompt("enter email", "mail00@mail.com");
+
+for (let i = 0; i < mailList.length; i++) {
+
+    if(mailList[i] === promptMail) {
+
+    console.log(`${promptMail} è presente allindice ${i}`);
+    break;
+
+} 
+
+    else {
+    console.log(`${promptMail} non è presente all'indice ${i} (${mailList[i]})`);
+
+}
+
+}
+
 // const userMail = prompt("Inserisci la tua email");
 
 /* ----------METODO 1 ---------- */
@@ -106,7 +124,7 @@ mailCheck.addEventListener("submit", function(e)
     e.preventDefault();
 
     //do a userMail il valore del campo input "email"
-    userMail = document.getElementById("userMail").value;
+    const userMail = document.getElementById("userMail").value;
 
     if (mailList.includes(`${userMail}`))
 {
@@ -127,8 +145,15 @@ else {
 
 }
 
-})
+}
 
+)
 
+mailCheck.addEventListener("reset", function ()
+{
+    mailCheckText.classList.remove("text-danger");
+    mailCheckText.classList.remove("text-success");
+    mailCheckText.innerHTML = "Enter a mail adress to check if it is in the list.";
+}
 
-
+)
