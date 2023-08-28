@@ -88,6 +88,7 @@ const mailCheckContainer = document.querySelector(".mailCheckContainer");
 
 //Creo l'h1 che diverrà il testo del check
 const mailCheckText = document.createElement("h1");
+mailCheckText.classList.add("text-center", "mt-2");
 
 //inserisco nell'h1 un testo placeholder
 mailCheckText.append("Enter a mail adress to check if it is in the list.");
@@ -109,14 +110,16 @@ mailCheckBtn.addEventListener("click", function()
 {
 
     // //se la mail inserita è in lista viene mostrato un messaggio di esito positivo
-
+    mailCheckText.classList.add("text-success");
     mailCheckText.innerHTML = `The adress "${userMail}" in on the list.`;
+    
 
 } 
 
 else {
     //se la mail inserita non è in lista viene mostrato un messaggio di esito negativo
 
+    mailCheckText.classList.add("text-danger");
     mailCheckText.innerHTML = `WARNING: "${userMail}" in not a valid e-mail adress.`;
 
 }
