@@ -115,7 +115,6 @@ mailCheck.addEventListener("submit", function(e)
     mailCheckText.classList.remove("text-danger");
     mailCheckText.classList.add("text-success");
     mailCheckText.innerHTML = `The adress "${userMail}" is in the list.`;
-    userMail.value = "";
 
 } 
 
