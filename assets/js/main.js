@@ -97,11 +97,13 @@ mailCheckText.append("Enter a mail adress to check if it is in the list.");
 mailCheckContainer.append(mailCheckText);
 
 //seleziono il bottone usando una variabile
-const mailCheckBtn = document.getElementById("mailCheck");
+const mailCheck = document.getElementById("mailCheck");
 
 // aggiungo un listener al click del bottone
-mailCheckBtn.addEventListener("click", function() 
+mailCheck.addEventListener("submit", function(e) 
 {
+
+    e.preventDefault();
 
     //do a userMail il valore del campo input "email"
     userMail = document.getElementById("userMail").value;
@@ -112,6 +114,7 @@ mailCheckBtn.addEventListener("click", function()
     // //se la mail inserita è in lista viene mostrato un messaggio di esito positivo
     mailCheckText.classList.add("text-success");
     mailCheckText.innerHTML = `The adress "${userMail}" is in the list.`;
+    userMail.value = "";
 
 } 
 
