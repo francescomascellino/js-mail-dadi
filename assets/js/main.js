@@ -2,10 +2,36 @@
 Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto.
 Prima di partire a scrivere codice poniamoci qualche domanda: Che ci sia un array da qualche parte? Se dobbiamo confrontare qualcosa che "cosa" ci serve? */
 
-userDice = Math.floor((Math.random() * 6) + 1);
+/* ----------METODO 1 ---------- */
+
+/* const userDice = Math.floor((Math.random() * 6) + 1);
 console.log(`TIRO UTENTE = ${userDice}`);
 
-computerDice = Math.floor((Math.random() * 6) + 1);
+const computerDice = Math.floor((Math.random() * 6) + 1);
+console.log(`TIRO DELLA MACCHINA = ${computerDice}`);
+
+if (userDice > computerDice) {
+    console.log("User wins");
+} 
+
+else if (userDice < computerDice) {
+    console.log("Machine wins");
+} 
+
+else {
+    console.log("Tie");
+} */
+
+/* ----------METODO 2 ---------- */
+
+// I numeri vengono recuperati randomicamente da un array
+
+const diceNumbers = [1, 2, 3, 4, 5, 6];
+
+const userDice = diceNumbers[Math.floor((Math.random() * diceNumbers.length))];
+console.log(`TIRO UTENTE = ${userDice}`);
+
+const computerDice = diceNumbers[Math.floor((Math.random() * diceNumbers.length))];
 console.log(`TIRO DELLA MACCHINA = ${computerDice}`);
 
 if (userDice > computerDice) {
