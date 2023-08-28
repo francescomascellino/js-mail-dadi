@@ -53,7 +53,7 @@ Usiamo un input e un bottone per inserire la mail e poi mostriamo i risultati in
 
 const mailList = ["mail00@mail.com", "mail01@mail.com", "mail02@mail.com", "mail03@mail.com", "mail04@mail.com"]
 
-const promptMail = prompt("enter email", "mail00@mail.com");
+const promptMail = prompt("Inserisci la tua email", "mail00@mail.com");
 
 for (let i = 0; i < mailList.length; i++) {
 
@@ -70,8 +70,6 @@ for (let i = 0; i < mailList.length; i++) {
 }
 
 }
-
-// const userMail = prompt("Inserisci la tua email");
 
 /* ----------METODO 1 ---------- */
 
