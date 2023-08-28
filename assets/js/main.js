@@ -111,7 +111,7 @@ mailCheckBtn.addEventListener("click", function()
 
     // //se la mail inserita è in lista viene mostrato un messaggio di esito positivo
     mailCheckText.classList.add("text-success");
-    mailCheckText.innerHTML = `The adress "${userMail}" in on the list.`;
+    mailCheckText.innerHTML = `The adress "${userMail}" is in the list.`;
 
 } 
 
