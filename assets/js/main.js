@@ -112,6 +112,7 @@ mailCheck.addEventListener("submit", function(e)
 {
 
     // //se la mail inserita è in lista viene mostrato un messaggio di esito positivo
+    mailCheckText.classList.remove("text-danger");
     mailCheckText.classList.add("text-success");
     mailCheckText.innerHTML = `The adress "${userMail}" is in the list.`;
     userMail.value = "";
@@ -121,6 +122,7 @@ mailCheck.addEventListener("submit", function(e)
 else {
     //se la mail inserita non è in lista viene mostrato un messaggio di esito negativo
 
+    mailCheckText.classList.remove("text-success");
     mailCheckText.classList.add("text-danger");
     mailCheckText.innerHTML = `WARNING: "${userMail}" in not a valid e-mail adress.`;
 
