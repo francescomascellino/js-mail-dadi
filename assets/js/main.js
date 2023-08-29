@@ -55,19 +55,34 @@ const mailList = ["mail00@mail.com", "mail01@mail.com", "mail02@mail.com", "mail
 
 const promptMail = prompt("Inserisci la tua email", "mail00@mail.com");
 
+// CREO UNA VARIABILE BOLEANA DI CONTROLLO CHE DI BASE E' FALSA (ACCESSO NEGATO)
+let control = false;
+
+//CICLO L'ARRAY PER CERCARE L'EMAIL NELL'INDICE
 for (let i = 0; i < mailList.length; i++) {
 
+    // SE E' PRESENTE CAMBIO IL VALORE DI control
     if(mailList[i] === promptMail) {
 
-    console.log(`${promptMail} è presente allindice ${i}`);
-    break;
-
-} 
-
-    else {
-    console.log(`${promptMail} non è presente all'indice ${i} (${mailList[i]})`);
+    control = true;
 
 }
+
+}
+
+console.log(control);
+
+// CONTROLLO FUORI DAL CICLO PER NON AVERE UN MESSAGGIO PER OGNI LOOP SE control è true O false
+
+// SE control (true)
+if (control) {
+
+    console.log(`${promptMail} è presente in lista`);
+
+//ALTRIMENTI
+} else {
+
+    console.log(`${promptMail} non è presente in lista`);
 
 }
 
